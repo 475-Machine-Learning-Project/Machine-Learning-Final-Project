@@ -5,6 +5,8 @@ Our final project tackles the task of image inpainting, which refers to the chal
 ## Setup
 ```sh
 git clone https://github.com/475-Machine-Learning-Project/Machine-Learning-Final-Project.git
+python3 -m venv ml-proj
+source ml-proj/bin/activate
 pip install requirements.txt
 ```
 
