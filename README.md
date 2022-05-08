@@ -1,15 +1,23 @@
 # Machine-Learning-Final-Project
 
-Our final project tackles the task of image inpainting, which refers to the challenge of repairing missing or damaged portions of an image in such a way that the generated image closely resembles the original image. As an example, in the images below, an inpainting solution would attempt to fill in the white squares to best reproduce an input that can plausibly pass for the original image. To achieve this task, we will use a Generative Adversarial Network (GAN).
+### Preprocessing and Dataloader Utilities
 
-## Setup
-```sh
-git clone https://github.com/475-Machine-Learning-Project/Machine-Learning-Final-Project.git
-python3 -m venv ml-proj
-source ml-proj/bin/activate
-pip install requirements.txt
-```
+`DownloadData.py`: Download the MIT Places dataset using torchvision's dataset loader.
 
-## Running the code
-- Baseline methods (Navier Stokes & Fast Marching): AnalyticalSolns.ipynb
-- GAN model training, development, and testing: tfgan/model.ipynb
+`MakeData.py` : Preprocess data by adding a mask to the images
+
+`BlankMask.ipynb` : Jupyter Notebook utility for processing data on colab
+
+### Evaluation
+
+`AnalyticalSolns.ipynb` : Implements fast marching and Navier Stokes methods for image invilling using OpenCV's tools for comparison to GAN performance.
+
+### Network
+
+`models/network.py`: Definitions for generator and discriminator networks
+
+`main.ipynb`: Jupyter Notebook implementing GAN architecture for image infilling
+
+### PreTrained
+
+`/Trained` : Pretrained models for quick loading.
